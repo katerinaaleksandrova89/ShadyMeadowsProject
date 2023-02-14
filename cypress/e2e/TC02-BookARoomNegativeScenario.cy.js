@@ -4,9 +4,7 @@ describe('Shady Meadows testing', function () {
   })
 
   //Negative scenario
-
   it("TC02-Book a room- Negative scenario", function () {
-
 
     //Open and verify Booking section
     cy.get('.openBooking').first().should('exist')
@@ -30,7 +28,6 @@ describe('Shady Meadows testing', function () {
     cy.get('.rbc-toolbar').should('exist')
     cy.get('.rbc-btn-group').should('exist')
 
-    //
     cy.get('.book-room').first().click()
     cy.get('.openBooking').first().click()
     cy.get('.book-room').eq(1).click()
@@ -54,27 +51,5 @@ describe('Shady Meadows testing', function () {
     cy.get('.room-phone').focus().click().type("23456789123456789" + '{enter}')
     cy.get('.alert-danger').should('exist')
     cy.wait(1000)
-
-
-
-
-
-
-    // Test
-    //cy.get('.openBooking').first().click();
-    //cy.get('.rbc-calendar').click();
-
-    //cy.contains(".rbc-button-link 12", "13").click();
-
-    //cy.get('.openBooking').eq(1).click()
-    //cy.get('.rbc-day-bg').eq(3).trigger('dragstart', { DataTransfer })
-    //cy.get('.rbc-day-bg').eq(4).trigger('drop', { DataTransfer })
-
-    //cy.get('[class^=01').dragTo('[class=rbc-button-link]', '02');
-
-
   })
 })
-
-
-

@@ -13,11 +13,13 @@ In the "Shady Meadows Project" with the tests scenarios are covered following fe
 
 # Test scenarios
 
-The Manual Test Cases are in the folder TestScenarious.txt. under the folder cypress.
-Every Manual Test Case has: steps, expected results and Bugs reported during testing of that Test Case.
-The Bugs are reported under every Manual Test Case.
-Reporting of the bugs was not part of the assignment, and for using less documents I reported the Bugs without Steps to reproduce
-But every Bug have the info on which step of which Test Case is found.
+The Manual Test Cases are in the file testScenarious.txt.
+Every Manual Test Case has: steps and expected results. 
+
+The Bugs are reported in the file bugReport.txt.
+Every Bug has Actual and Expected results.
+I reported the Bugs without Steps to reproduce, but every Bug have the info on which step of which Test Case is found.
+
 They are:
 - Test Case: TC01 and Bugs: Bug 01 and Bug 02
 - Test Case: TC02 and Bugs: Bug 03, Bug 04, Bug 05, Bug 06 and Bug 07
@@ -31,10 +33,10 @@ The Automated Tests are located in the folder e2e.
 All the automated tests are automated by the steps from the manual test cases.
 I choose to automate this test scenarios because they are covering the main functionalities of the application.
 They are:
-- TC01-Testing the homepage GUI parts.cy.js
-- TC02- Book a room(negative scenario).cy.js
-- TC06- Log in as admin.cy.js
-- TC07- Admin permissions.cy
+- TC01-TestingTheHomepageGUIParts.cy.js
+- TC02-BookARoomNegativeScenario.cy.js
+- TC06-LogInAsAdmin.cy.js
+- TC07-AdminPermissions.cy
 
 
 
@@ -44,7 +46,7 @@ They are:
 - Supported by Cypress [browsers](https://docs.cypress.io/guides/guides/launching-browsers#Browsers) of your choise
 
 
-## Run tested app
+## Used urls:
 
 - url1: https://automationintesting.online/#
 - url2: https://automationintesting.online/#/admin/
@@ -71,7 +73,6 @@ Below are the steps on how to run all test in single run:
 - enable the feature flag experimentalRunAllSpecs:true in cypress.config.js
 - run `npx cypress open` and next to E2E specs, there is a button "Run 4 specs"
 - click on the button "Run 4 specs"
-
 
 
 ## Libraries used

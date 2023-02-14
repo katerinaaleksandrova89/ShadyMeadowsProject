@@ -4,7 +4,6 @@ describe('Shady Meadows testing', function () {
     })
 
     //Positive scenario
-
     it("TC01-Testing the homepage GUI parts", function () {
         cy.get('.hotel-logoUrl').should('exist')
         cy.get('.hotel-description').should('exist')
@@ -17,7 +16,6 @@ describe('Shady Meadows testing', function () {
         cy.wait(1000)
         cy.get('.map').should('exist')
         cy.wait(1000)
-
 
         //Verify the Logo section 
         cy.get('.hotel-logoUrl').should('exist')
@@ -60,7 +58,5 @@ describe('Shady Meadows testing', function () {
         cy.get('.pigeon-overlays').should('exist')
         cy.get('.pigeon-click-block').should('exist')
         cy.wait(1000)
-
-
     })
 })

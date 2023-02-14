@@ -1,0 +1,58 @@
+Bug Report
+
+Bug 01 / Found on Step 4 of TC01  
+Actual results: The word "single" should be written with a capital letter-"Single".
+There is a random text instead of a description for the room.
+Expected results: The single room should have the proper description.
+
+Bug 02 / Found on Step 6 of TC01   The map has several bugs.
+Actual results: -The map is not interactive.
+-The pinned location is not clickable and on hover, the pinned location is not displaying the correct address. 
+-Even after zooming in the correct location is not displayed.
+-The map doesn't have any indication for zoom in/out, therefore it can only be zoom in/out with the touchpad.
+Expected results: The Map should have a behaviour as Google Maps.
+-Assumption that this map is based on Google Maps and should have the same behaviour.
+
+Bug 03/ Found on Step 3 of TC02
+Actual results: The price of the room is not displayed.
+Expected results: The room should have price, when the user is clicking the button "Book"
+
+Bug 04/ Found on Step 4 o fTC02
+Actual results: The fields "Firstname" and "Lastname" have a typo.
+Expected results: The fields "Firstname" and "Lastname" should be written as "First name","Last name" or "First Name","Last Name" 
+
+Bug 05/ Found on Step 4 of TC02
+Actual results: The error message from the booking form is not clear.
+Expected results: The user should understand which of the error messages are pointing to which fields.
+
+Bug 06/ Found on Step 12 of TC02
+Actual results: The user can book a room if the name and last name contain only integers. 
+Expected results: The user should not be able to make a booking if the name and last name contain only integers.
+
+Bug 07/ Found on Step 12 of TC02
+Actual results: There is no message displaying the name and last name are not in the correct form.
+Expected results: When the name and last name are written only with integers, the user should be informed with the error message that the form is not correct.
+
+Bug 08/ Found on Step 6 of TC03
+Actual results: The user can book a room if the selected dates are before the current date and/or the name and last name contain only integers. 
+Expected results: The user should not be able to make a booking if the selected dates are before the current date. And/or if the name and last name contain only integers.
+
+Bug 09/ Found on Step 5 of TC04
+Actual results: The booked room is not displayed anymore after closing the popup message.
+Expected results: The booked room should be displayed after closing the popup message.
+
+Bug 10/ Found on Step 13 of TC05
+Actual results: The user can send a message if in the phone field have only characters.
+Expected results: The use should not be able to send a message if the phone field doesn't have integers.
+
+Bug 11/ Found on Step3 of TC06
+Actual results: No error message is displayed, when the user is trying to "Log in" with an invalid "Username" and "Password"
+Expected results: An error message should be displayed when the "Username" and "Password" are incorrect.
+
+Bug 12/ Found on Step3 of TC07
+Actual results: The error message from the booking form is not clear.
+Expected results: The user should understand which of the error messages are pointing to which fields.
+
+Bug 13/ Found on Step5 of TC07
+Actual results: There is no indication that the rooms can be edited.
+Expected results: The user should be able to click on "Edit" button.

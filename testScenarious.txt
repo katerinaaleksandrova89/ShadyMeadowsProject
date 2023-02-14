@@ -1,6 +1,5 @@
 Manual Test Cases
 
-
 TC01- Testing the homepage GUI parts
 
 Steps:
@@ -40,21 +39,6 @@ On the right side:
 - phone icon and 012345678901
 - envelope icon and fake@fakeemail.com
 6. The Map is displayed with a pinned location of the Shady Meadows B&B
-
-
-Bug 01 / Step 4 -TC01  
-Actual results: The word "single" should be written with a capital letter-"Single".
-There is a random text instead of a description for the room.
-Expected results: The single room should have the proper description.
-
-Bug 02 / Step 6 -TC01   The map has several bugs.
-Actual results: -The map is not interactive.
--The pinned location is not clickable and on hover, the pinned location is not displaying the correct address. 
--Even after zooming in the correct location is not displayed.
--The map doesn't have any indication for zoom in/out, therefore it can only be zoom in/out with the touchpad.
-Expected results: The Map should have a behaviour as Google Maps.
--Assumption that this map is based on Google Maps and should have the same behaviour.
-
 
 -----------------------------------
 TC02- Book a room (negative scenario)
@@ -105,28 +89,6 @@ On the left side, there are the fields:
 14. The message "size must be between 11 and 21" is not displayed anymore.
 15. Booking of the room in not successful
 
-
-Bug 03/ Step 3 -TC02
-Actual results: The price of the room is not displayed.
-Expected results: The room should have price, when the user is clicking the button "Book"
-
-Bug 04/ Step 4 -TC02
-Actual results: The fields "Firstname" and "Lastname" have a typo.
-Expected results: The fields "Firstname" and "Lastname" should be written as "First name","Last name" or "First Name","Last Name" 
-
-Bug 05/ Step 4 -TC02
-Actual results: The error message from the booking form is not clear.
-Expected results: The user should understand which of the error messages are pointing to which fields.
-
-Bug 06/ Step 12 -TC02
-Actual results: The user can book a room if the name and last name contain only integers. 
-Expected results: The user should not be able to make a booking if the name and last name contain only integers.
-
-Bug 07/ Step 12 -TC02
-Actual results: There is no message displaying the name and last name are not in the correct form.
-Expected results: When the name and last name are written only with integers, the user should be informed with the error message that the form is not correct.
-
-
 -----------------------------------
 TC03- Book a room (positive scenario)
 Precondition:
@@ -157,12 +119,6 @@ and a "Book this room" button.
 9. The room is not available for the Previously booked dates.
 Previously booked dates have the message "unavailable" on blue label.
 
-
-Bug 08/ Step 6 - TC03
-Actual results: The user can book a room if the selected dates are before the current date and/or the name and last name contain only integers. 
-Expected results: The user should not be able to make a booking if the selected dates are before the current date. And/or if the name and last name contain only integers.
-
-
 -----------------------------------
 TC04- Verify that a room is booked (positive scenario)
 Precondition:
@@ -184,12 +140,6 @@ Expected results:
 4. The popup message is closed.
 5. The booked room is still displayed.
 6. The booked room is deleted.
-
-
-Bug 09/ Step 5 -TC04
-Actual results: The booked room is not displayed anymore after closing the popup message.
-Expected results: The booked room should be displayed after closing the popup message.
-
 
 -----------------------------------
 TC05- Send a message via contact form (negative and positive scenario)
@@ -245,11 +195,6 @@ Fields are displayed: "Name", "Email", "Phone", "Subject" and "Message".
 22. The message is still displayed.
 23. The message is deleted.
 
-Bug 10/ Step 13 -TC05
-Actual results: The user can send a message if in the phone field have only characters.
-Expected results: The use should not be able to send a message if the phone field doesn't have integers.
-
-
 -----------------------------------
 TC06- Log in as admin (negative and positive scenarios)
 
@@ -283,12 +228,6 @@ Under it there is a "Log into your account" form with fields: "Username" and "Pa
 4. The log in form is opened.
 5.-17. The fields: "Username" and "Password" have red outlines.
 18. The user is logged in and the admin page is opened.
-
-
-Bug 11/ Step3 - TC06
-Actual results: No error message is displayed, when the user is trying to "Log in" with an invalid "Username" and "Password"
-Expected results: An error message should be displayed when the "Username" and "Password" are incorrect.
-
 
 -----------------------------------
 TC07- Admin permissions (negative and positive scenarios)
@@ -339,13 +278,4 @@ must be greater than or equal to 1".
 19. The room "Double" is displayed with the correct details.
 20. The room is deleted.
 21.The room is not displayed on the home page.
-
-Bug 12/ Step3 -TC07
-Actual results: The error message from the booking form is not clear.
-Expected results: The user should understand which of the error messages are pointing to which fields.
-
-Bug 13/ Step5 -TC07
-Actual results: There is no indication that the rooms can be edited.
-Expected results: The user should be able to click on "Edit" button.
-
 ---------------------------------------

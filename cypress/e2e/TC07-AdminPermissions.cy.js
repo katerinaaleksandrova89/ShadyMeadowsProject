@@ -90,6 +90,5 @@ describe('Shady Meadows testing', function () {
     cy.get('[alt="Preview image of room103"]').should('not.exist')
     cy.get('h3').eq(1).should('not.exist')
     cy.get('.col-sm-7').eq(1).should('not.exist')
-
   })
 })

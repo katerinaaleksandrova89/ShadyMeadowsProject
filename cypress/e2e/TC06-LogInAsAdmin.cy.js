@@ -6,13 +6,12 @@ describe('Shady Meadows testing', function () {
   })
 
   //Negative and Positive scenarios
-
   it("TC03- Log in as admin", function () {
 
     //Catch 403 error
     cy.on('uncaught:exception', (err, runnable) => { return false })
 
-    //Verify Log in form
+    //Verify the Log in form
     cy.get('.order-0').should('exist')
     cy.get('.mx-auto').should('exist')
     cy.get('.mx-auto').find('a').should('have.text', 'B&B Booking Management')
@@ -74,15 +73,5 @@ describe('Shady Meadows testing', function () {
     cy.get('#username').focus().click().type("in" + '{enter}')
     cy.get('#doLogin').click()
     cy.get('#frontPageLink').should('exist')
-
-
-
-
-    //cy.get('#username').should('exist')
-    //cy.get('#username').focus().click().type("admin" + '{enter}')
-    //cy.get('#password').should('exist')
-    //cy.get('#password').focus().click().type("password" + '{enter}')
-    //cy.get('#doLogin').should('exist')
-    //cy.get('#doLogin').click()
   })
 })

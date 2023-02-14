@@ -1,0 +1,351 @@
+Manual Test Cases
+
+
+TC01- Testing the homepage GUI parts
+
+Steps:
+1. Open the application.
+2. Verify the homepage.
+3. Verify the first section "Logo section".
+4. Verify the second "Rooms" section.
+5. Verify the third "Contact" section.
+6. Verify the fourth "Map" Section
+
+Expected results:
+1. The application is opened
+2. The homepage has four sections
+- "Logo" section
+- "Rooms" section
+- "Contact" section
+- "Map" Section
+3. In the first "Logo" section  there is the logo -an image of the "Shady Meadows" house and 
+a title above the house picture "Shady Meadows Bed & Breakfast".
+Under it, there is a text description.
+4. In the second section "Rooms" images and descriptions for the available rooms are displayed.
+- When one room is available, then in the "Rooms section" on the left side there is an image of the room.
+And on the right side, there is a description provided for that room. 
+(The name of the room is "single". In the right corner there is a wheelchair icon.)
+- "Book this room" button is displayed on the right side
+5. In the third section there is the contact form and contact information for "Shady Meadows Bed & Breakfast".
+On the left side, there are the fields:
+- "Name" with an icon "id card"
+- "Email" with an icon "envelope"
+- "Phone" with an icon "phone"
+- "Subject" with an icon "envelope"
+- "Message"
+- "Submit" button under the message
+On the right side:
+- house icon and the name "Shady Meadows B&B"
+- the address "The Old Farmhouse, Shady Street, Newfordburyshire, NE1 410S"
+- phone icon and 012345678901
+- envelope icon and fake@fakeemail.com
+6. The Map is displayed with a pinned location of the Shady Meadows B&B
+
+
+Bug 01 / Step 4 -TC01  
+Actual results: The word "single" should be written with a capital letter-"Single".
+There is a random text instead of a description for the room.
+Expected results: The single room should have the proper description.
+
+Bug 02 / Step 6 -TC01   The map has several bugs.
+Actual results: -The map is not interactive.
+-The pinned location is not clickable and on hover, the pinned location is not displaying the correct address. 
+-Even after zooming in the correct location is not displayed.
+-The map doesn't have any indication for zoom in/out, therefore it can only be zoom in/out with the touchpad.
+Expected results: The Map should have a behaviour as Google Maps.
+-Assumption that this map is based on Google Maps and should have the same behaviour.
+
+
+-----------------------------------
+TC02- Book a room (negative scenario)
+Precondition:
+1. The homepage of the application is opened
+2. One room is available and displayed
+
+Steps:
+1. Scroll down and go to the second section "Rooms".
+2. Hover the button "Book this room".
+3. Click on the button "Book this room".
+4. Verify the booking form.
+5. Click on the button "Cancel".
+6. Click on the button "Book this room".
+7. Click on the button "Book"
+8. Click on the field "Firstname" and type an integer e.g. "1" and click on the button "Book"
+9. Click on the field "Lastname" and type an integer e.g. "1" and click on the button "Book"
+10. Click on the field "Email" and type an integer e.g. "1" and click on the button "Book"
+11. Click on the field "Phone" and type an integer e.g. "1" and click on the button "Book"
+12. Click on the fields "Firstname" and "Lastname" and type integers e.g. "2,3" and click on the button "Book"
+13. Click on the field "Email" and type an  e.g. "@testing.com" and click on the button "Book"
+14. Click on the field "Phone" and type integers e.g. "23456789123456789"
+15. Click on the button "Book"
+
+Expected results:
+1. The section "Rooms" is displayed. With the image of the room, some description
+and a "Book this room" button.
+2. The button "Book this room" is fully colored in blue.
+3. A booking form is displayed under the room's image and description.
+4. The booking form on the left side has the calendar of the current month with the title "February 2023"
+and three buttons on the right above the calendar. Those buttons are" "Today", "Back" and "Next". The current date is coloured in light blue.
+On the left side, there are the fields:
+- "Firstname" with an icon "id card"
+- "Lastname" with an icon "id card"
+- "Email" with an icon "envelope"
+- "Phone" with an icon "phone"
+- "Book" button with blue outline and letters
+- and the "Cancel" button with a red outline and letters
+5. The booking form is closed.
+6. The booking form is displayed
+7. An error message is displayed, containing several messages.
+8. One of the messages "must not be empty" is not displayed anymore.
+9. Another message "must not be empty" is not displayed anymore.
+10. The order of the error messages is changed
+11. Another message "must not be empty" is not displayed anymore.
+12. Messages "size must be between 3 and 18" and "size must be between 3 and 30" are not displayed anymore
+13. The message "must be a well-formed email address" is not displayed anymore.
+14. The message "size must be between 11 and 21" is not displayed anymore.
+15. Booking of the room in not successful
+
+
+Bug 03/ Step 3 -TC02
+Actual results: The price of the room is not displayed.
+Expected results: The room should have price, when the user is clicking the button "Book"
+
+Bug 04/ Step 4 -TC02
+Actual results: The fields "Firstname" and "Lastname" have a typo.
+Expected results: The fields "Firstname" and "Lastname" should be written as "First name","Last name" or "First Name","Last Name" 
+
+Bug 05/ Step 4 -TC02
+Actual results: The error message from the booking form is not clear.
+Expected results: The user should understand which of the error messages are pointing to which fields.
+
+Bug 06/ Step 12 -TC02
+Actual results: The user can book a room if the name and last name contain only integers. 
+Expected results: The user should not be able to make a booking if the name and last name contain only integers.
+
+Bug 07/ Step 12 -TC02
+Actual results: There is no message displaying the name and last name are not in the correct form.
+Expected results: When the name and last name are written only with integers, the user should be informed with the error message that the form is not correct.
+
+
+-----------------------------------
+TC03- Book a room (positive scenario)
+Precondition:
+1. The homepage of the application is opened
+2. One room is available and displayed
+
+Steps:
+1. Scroll down and go to the second section "Rooms".
+2. Click on the fields "Firstname" and "Lastname" and type some characters e.g. "test"
+3. Click on the field "Email" and type "test@testing.com"
+4. Click on the field "Phone" and type an integer e.g. "123456789123456789"
+5. Click on some date from the past month and drag it to some next day, e.g. (02.01-05.01)
+6. Click on the button "Book"
+7. Click on some date after the current date and drag it to some next day, e.g. (27.02-28.02)
+8. Click on the button "Book".
+9. Refresh the page and check the availability of the room for the previous booked dates.
+
+Expected results:
+1. The section "Rooms" is displayed. With the image of the room, some description
+and a "Book this room" button.
+2. "Test" is entered in the fields "Firstname" and "Lastname".
+3. "test@testing.com" is entered in the field "Email".
+4. "123456789123456789" is entered in the field "phone".
+5. Past dates from the calendar are connected with a blue line.
+6. The booking of the room is not successful
+7. Future dates from the calendar are connected with a blue line.
+8. The booking of the room is successful.
+9. The room is not available for the Previously booked dates.
+Previously booked dates have the message "unavailable" on blue label.
+
+
+Bug 08/ Step 6 - TC03
+Actual results: The user can book a room if the selected dates are before the current date and/or the name and last name contain only integers. 
+Expected results: The user should not be able to make a booking if the selected dates are before the current date. And/or if the name and last name contain only integers.
+
+
+-----------------------------------
+TC04- Verify that a room is booked (positive scenario)
+Precondition:
+1. A room has been booked (TC03)
+2.The admin page is opened 
+
+Steps:
+1. Click on the icon with the notification, on the right top corner.
+2. Click on "You have a new booking" message.
+3. Check the popup message.
+4. Click on the button "Close".
+5. Check the reservation page.
+6. Click on the button "x" on the booked room.
+
+Expected results:
+1. Notification page is opened."Tou have a new booking" message is displayed.
+2. Popup message is displayed.
+3. The popup message has all the details entered during booking the room.
+4. The popup message is closed.
+5. The booked room is still displayed.
+6. The booked room is deleted.
+
+
+Bug 09/ Step 5 -TC04
+Actual results: The booked room is not displayed anymore after closing the popup message.
+Expected results: The booked room should be displayed after closing the popup message.
+
+
+-----------------------------------
+TC05- Send a message via contact form (negative and positive scenario)
+Precondition:
+1. The homepage of the application is opened
+
+Steps:
+1. Scroll down and go to the second section "Contact".
+2. Click on the button "Submit"
+3. Click on the field "Name" and type some characters e.g. "test"
+4. Click on the field "Email" and type "test"
+5. Click on the field "Phone" and type a character e.g. "a"
+6. Click on the field "Subject" and type a character e.g. "a"
+7. Click on the field "Message" and type a character e.g. "a"
+8. Click on the button "Submit".
+9. Click on the field "Email" and type "@testing.com"
+10. Click on the field "Phone" and type characters e.g. "testingtest"
+11. Click on the field "Subject" and type characters e.g. "testing"
+12. Click on the field "Message" and type characters e.g. "testing a message on the contact form"
+13. Click on the button "Submit".
+14. Click on the field "Phone" and type a character e.g. "123456789123456789"
+15. Click on the button "Submit".
+16. Open the admin page. 
+17. Click on the icon with the notification, on the right top corner.
+18. Click on the new message.
+19. Check the popup message.
+20. Click on the button "Close".
+21. Check the reservation page.
+22. Click on the button "x" on the booked room.
+
+Expected results:
+1. The section "Contact" is displayed. 
+Fields are displayed: "Name", "Email", "Phone", "Subject" and "Message".
+2. There is an error message displayed under the contact form.
+3. "Test" is entered in the field "Name".
+4. "test" is entered in the field "Email".
+5. "a" is entered in the field "Phone".
+6. "a" is entered in the field "Subject".
+7. "a" is entered in the field "Message".
+8. The error message is updated.
+9. "test@testing.com" is entered in the field "Email".
+10. "testingtest" is entered in the field "Phone".
+11. "testing" is entered in the field "Subject".
+12. "testing a message on the contact form" is entered in the field "Message"
+13. Error message is displayed that the phone form is not correct. 
+14. "123456789123456789" is entered in the field "Phone".
+15. The message is successful sent. There is a message displayed "Thanks for getting in touch test!".
+16. The admin page is opened
+17. Notification page is opened. The message displayed.
+18. Popup message is displayed.
+19. The popup message has all the details entered during booking the room.
+20. The popup message is closed.
+22. The message is still displayed.
+23. The message is deleted.
+
+Bug 10/ Step 13 -TC05
+Actual results: The user can send a message if in the phone field have only characters.
+Expected results: The use should not be able to send a message if the phone field doesn't have integers.
+
+
+-----------------------------------
+TC06- Log in as admin (negative and positive scenarios)
+
+Steps:
+1. Open the Log in form.
+2. Verify the "Log in" form.
+3. Click on the "B&B Booking Management" button.
+4. Go Back from the browser to the "Log in" Page
+3. Click on the "Login" button.
+4. Click in the field "Username" and type an integer e.g. "1" and click on the button "Login"
+5. Click in the field "Password" and type an integer e.g. "1" and click on the button "Login"
+6. Click in the field "Username", delete the integer and and click on the button "Login"
+7. Click in the field "Password", delete the integer and click on the button "Login"
+8. Click in the field "Username", type one character e.g. "t" and click on the button "Login"
+9. Click in the field "Password", type one character e.g. "t" and click on the button "Login"
+10. Click in the field "Username", type more characters e.g. "esting" and click on the button "Login".
+11. Click in the field "Password", type more characters e.g. "esting" and click on the button "Login".
+12. Click in the field "Username", delete the characters, type "admin" and click on the button "Login"
+13. Click in the field "Password", delete the characters and click on the button "Login"
+14. Click in the field "Password", type "pass" and click on the button "Login"
+15. Click in the field "Password", and type "word". 
+16. Click in the field "Username", delete the characters and click on the button "Login".
+17. Click in the field "Username", type "adm" and click on the button "Login".
+18. Click in the field "Username", type "in" and click on the button "Login".
+
+Expected results:
+1. The log in form is opened.
+2. There is a title "B&B Booking Management" on the top centre."B&B Booking Management" is a button.
+Under it there is a "Log into your account" form with fields: "Username" and "Password" and a "Login" button.
+3.The application is opened, when "B&B Booking Management" button is clicked.
+4. The log in form is opened.
+5.-17. The fields: "Username" and "Password" have red outlines.
+18. The user is logged in and the admin page is opened.
+
+
+Bug 11/ Step3 - TC06
+Actual results: No error message is displayed, when the user is trying to "Log in" with an invalid "Username" and "Password"
+Expected results: An error message should be displayed when the "Username" and "Password" are incorrect.
+
+
+-----------------------------------
+TC07- Admin permissions (negative and positive scenarios)
+
+Steps:
+1. Open the Log in form.
+2. Login in with proper credentials (username is admin and password is password)
+3. Click on the button "Create"
+4. Click in the first empty field (in Room# column), type and integers "102"
+5. Click on the "Type" dropdow and select "Twin"
+6. Click on the accessible dropdow and select "true" 
+7. Click in the empty in "Price" column, type an integers "150".
+8. Check all the room details, and click on the button "Create".
+9. Click on the button "Front Page" from the left top corner.
+10. Verify that the room "Twin" is displayed.
+11. Open the admin page, click on the newly created room and click on the button "Edit".
+12. Click on the Room number field, delete the integers"102" and type the integers"103"
+13. Click on the type dropdown and select "Double"
+14. Click on the Room price field, delete the integers "150" and type the integers "200".
+15. Uncheck the last three room features.
+16. Click in the description field, delete any description displayed and type "Double Room Description".
+17. Click on the button "Update"
+18. Click on the button "Front Page" from the left top corner.
+19. Verify that the room "Double" is displayed.
+20. Open the admin page, and click on the button "x" from the newly updated room.
+21. Click on the button "Front Page" from the left top corner and verify that the room is not displayed. 
+
+Expected results:
+1. The admin log in page is opened.
+2. The admin is logged in on the administration page.
+3. Two error messages with red backround are displayed under the room rows. "Room name must be set
+must be greater than or equal to 1".
+4. 102 is added as number of the room
+5. "Twin" type is selected
+6. "true" accessible is selected.
+7. 150 is added as the price of the room. 
+8. All the room details are checked. And the room is created.
+9. The user is redirected to home page.
+10. The room "Twin" is displayed with the correct details.
+11. Editing mode of the room is opened.
+12. The Room number is changed to "103"
+13. The Room Type is changed to "Double".
+14. The Room Price is changed to "200".
+15. The last three room features are unchecked.
+16. The Room Description is changed to "Double Room Description"
+17. The Room is updated.
+18. The user is redirected to home page.
+19. The room "Double" is displayed with the correct details.
+20. The room is deleted.
+21.The room is not displayed on the home page.
+
+Bug 12/ Step3 -TC07
+Actual results: The error message from the booking form is not clear.
+Expected results: The user should understand which of the error messages are pointing to which fields.
+
+Bug 13/ Step5 -TC07
+Actual results: There is no indication that the rooms can be edited.
+Expected results: The user should be able to click on "Edit" button.
+
+---------------------------------------

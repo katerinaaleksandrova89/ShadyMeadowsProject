@@ -1,0 +1,20 @@
+
+
+1. Test should run in a Docker container.
+
+I didn't success to run the tests in a docker container. I tried to set up the Docker container on my personal pc(Windows), but didn't wanted to run.
+I researched and tried several solution, but non of them could run the Desktop version of Docker.
+I have an error "This installation package is not supported by this processor type. Contact your product vendor" when Im opening my Desktop Docker and I can't get pass this error.
+
+I know is not the solution, but I worked with Docker container. And these are the steps that i remember:
+- create an account on https://hub.docker.com/ an download 'Docker Desktop Installer'.
+- install the Desktop version of Docker (if needed log in)
+- run 'docker -v' on the terminal to check the Docker version
+- run 'docker pull hello-world' to verify that docker in running
+- go to https://github.com/cypress-io/cypress-docker-images/tree/master/included and copy the last version of cypress/included
+- cd to project
+- run 'docker pull cypress/included:12.3.0'
+- docker-compose -f deploy/docker-compose/docker-compose.yml up -d
+
+
+2. I was not able to create a command for selecting dates in calendar. That why I didn't automated positive scenario for booking a room.

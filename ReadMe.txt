@@ -54,7 +54,8 @@ They are:
 
 ## Get started with e2e tests
 
-- Clone test project: 'git clone 'repository''
+- Clone test project: 'git clone https://github.com/katerinaaleksandrova89/ShadyMeadowsProject.git' 
+- or 'git clone https://gitlab.com/katerinaaleksandrova89/ShadyMeadowsProject.git'
 - cd to cloned project root directory
 - From the project's directory run `npm install` to install all required dependencies including Cypress.
 

@@ -18,3 +18,7 @@ I know is not the solution, but I worked with Docker container. And these are th
 
 
 2. I was not able to create a command for selecting dates in calendar. That why I didn't automated positive scenario for booking a room.
+
+
+3. I tried to add the tests to a CI pipeline but I was asked to verify my account with a credit card. And I don' want to add credit card.
+I tried some workaround but the pipeline failed.

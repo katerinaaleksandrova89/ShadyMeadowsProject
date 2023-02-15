@@ -97,7 +97,7 @@ Precondition:
 
 Steps:
 1. Scroll down and go to the second section "Rooms".
-2. Click on the fields "Firstname" and "Lastname" and type some characters e.g. "test"
+2. Click on the fields "Firstname" and "Lastname" and type some stings e.g. "test"
 3. Click on the field "Email" and type "test@testing.com"
 4. Click on the field "Phone" and type an integer e.g. "123456789123456789"
 5. Click on some date from the past month and drag it to some next day, e.g. (02.01-05.01)
@@ -149,18 +149,18 @@ Precondition:
 Steps:
 1. Scroll down and go to the second section "Contact".
 2. Click on the button "Submit"
-3. Click on the field "Name" and type some characters e.g. "test"
+3. Click on the field "Name" and type some strings e.g. "test"
 4. Click on the field "Email" and type "test"
-5. Click on the field "Phone" and type a character e.g. "a"
-6. Click on the field "Subject" and type a character e.g. "a"
-7. Click on the field "Message" and type a character e.g. "a"
+5. Click on the field "Phone" and type a string e.g. "a"
+6. Click on the field "Subject" and type a string e.g. "a"
+7. Click on the field "Message" and type a string e.g. "a"
 8. Click on the button "Submit".
 9. Click on the field "Email" and type "@testing.com"
-10. Click on the field "Phone" and type characters e.g. "testingtest"
-11. Click on the field "Subject" and type characters e.g. "testing"
-12. Click on the field "Message" and type characters e.g. "testing a message on the contact form"
+10. Click on the field "Phone" and type strings e.g. "testingtest"
+11. Click on the field "Subject" and type strings e.g. "testing"
+12. Click on the field "Message" and type strings e.g. "testing a message on the contact form"
 13. Click on the button "Submit".
-14. Click on the field "Phone" and type a character e.g. "123456789123456789"
+14. Click on the field "Phone" and type integers e.g. "123456789123456789"
 15. Click on the button "Submit".
 16. Open the admin page. 
 17. Click on the icon with the notification, on the right top corner.
@@ -208,15 +208,15 @@ Steps:
 5. Click in the field "Password" and type an integer e.g. "1" and click on the button "Login"
 6. Click in the field "Username", delete the integer and and click on the button "Login"
 7. Click in the field "Password", delete the integer and click on the button "Login"
-8. Click in the field "Username", type one character e.g. "t" and click on the button "Login"
-9. Click in the field "Password", type one character e.g. "t" and click on the button "Login"
-10. Click in the field "Username", type more characters e.g. "esting" and click on the button "Login".
-11. Click in the field "Password", type more characters e.g. "esting" and click on the button "Login".
-12. Click in the field "Username", delete the characters, type "admin" and click on the button "Login"
-13. Click in the field "Password", delete the characters and click on the button "Login"
+8. Click in the field "Username", type one string e.g. "t" and click on the button "Login"
+9. Click in the field "Password", type one string e.g. "t" and click on the button "Login"
+10. Click in the field "Username", type more strings e.g. "esting" and click on the button "Login".
+11. Click in the field "Password", type more strings e.g. "esting" and click on the button "Login".
+12. Click in the field "Username", delete the strings, type "admin" and click on the button "Login"
+13. Click in the field "Password", delete the strings and click on the button "Login"
 14. Click in the field "Password", type "pass" and click on the button "Login"
 15. Click in the field "Password", and type "word". 
-16. Click in the field "Username", delete the characters and click on the button "Login".
+16. Click in the field "Username", delete the strings and click on the button "Login".
 17. Click in the field "Username", type "adm" and click on the button "Login".
 18. Click in the field "Username", type "in" and click on the button "Login".
 
